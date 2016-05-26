@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="941" y="394"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="WIk-Kw-PCl">
             <objects>
-                <viewController id="oOY-0p-yJf" sceneMemberID="viewController">
+                <viewController id="oOY-0p-yJf" customClass="registrationViewController" customModule="SheCan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Khc-dg-i1Q"/>
                         <viewControllerLayoutGuide type="bottom" id="fOY-L2-gU4"/>
@@ -168,8 +168,11 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpBtn:" destination="oOY-0p-yJf" eventType="touchUpInside" id="LSo-2Q-2bK"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registeration Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ir-7N-Tom">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registration Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ir-7N-Tom">
                                 <rect key="frame" x="30" y="20" width="270" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -194,6 +197,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailField" destination="7VL-op-BoR" id="0lK-mt-lQt"/>
+                        <outlet property="nameField" destination="5Vp-uj-E9X" id="14k-ta-nDq"/>
+                        <outlet property="passConfirmField" destination="dnF-H6-abM" id="cul-Ya-AlE"/>
+                        <outlet property="passwordField" destination="bAQ-ea-SUd" id="TqC-yZ-rbS"/>
+                        <outlet property="phoneField" destination="eIh-OF-eiK" id="YiR-GA-mgn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUx-Df-W94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

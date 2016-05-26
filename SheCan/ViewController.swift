@@ -15,9 +15,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordField: UITextField!
 
+    
+    // Function that displays alert message to the user
     func displayAlert (title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -46,8 +50,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func LoginBtn(sender: AnyObject) {
+        
+        // Check if the Fields are empty
         if usernameField.text == "" || passwordField.text == "" {
             displayAlert("Missing Field(s)", message: "Username and password are required")
+        } else {
+            let username = usernameField.text
+            let password = passwordField.text
+            
         }
     }
 
